@@ -16,6 +16,12 @@ body {
 h1 {
   font-family: "Rubik", sans-serif;
 }
+input:focus {
+  outline: none;
+}
+input{
+  border-radius: 5px;
+}
 #todo-wrapper {
   background: #c70039;
   color: #fff5e0;
