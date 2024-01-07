@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styled from "styled-components";
 function EditTodoForm({ editTodo, task }) {
   //  The EditTodoForm component receives two props: editTodo and task.
   //  The editTodo prop is a function that is used to update the todo item,
@@ -20,7 +21,7 @@ function EditTodoForm({ editTodo, task }) {
   //  After calling the editTodo function, the setValue function is called to reset the value state to an empty string.
 
   return (
-    <form id="todo-form" onSubmit={handleSubmit}>
+    <EditedForm id="todo-form" onSubmit={handleSubmit}>
       {/* The onSubmit event of the form is set to the handleSubmit function. */}
       <input
         type="text"
@@ -34,12 +35,30 @@ function EditTodoForm({ editTodo, task }) {
       placeholder attribute is set to "Update Task".The onChange event of the
       input element is set to an arrow function that calls the setValue
       function, passing the updated value from the input field. */}
-      <button type="submit">Update Task</button>
+      <Button type="submit">Update Task</Button>
       {/* Finally, a button element with a type of "submit" is rendered.This button
       is used to submit the form and trigger the handleSubmit function when
       clicked. */}
-    </form>
+    </EditedForm>
   );
 }
-
+const EditedForm = styled.form`
+  display: grid;
+  grid-template-columns: 78% 20%;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1rem;
+  grid-gap: 2%;
+  // @media (max-width: 600px) {
+  //   grid-template-columns: 1fr 1fr;
+  //   justify-content: center;
+  //   grid-gap: 1rem;
+  //   // Adjust styles for smaller screens (sm)
+  // }
+`;
+const Button = styled.button`
+  padding: 15px 5px;
+`;
 export default EditTodoForm;
