@@ -1,16 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   font-family: "Poppins", sans-serif;
   background: #ff6969;
   color: #fff5e0;
   text-align: center;
   display: grid;
+  justify-content: center;
+}
+.App {
+  display: grid;
   justify-items: center;
-  align-items: center;
 }
 
 h1 {
@@ -19,41 +25,12 @@ h1 {
 input:focus {
   outline: none;
 }
-input{
-  border-radius: 5px;
-}
 #todo-wrapper {
-  background: #c70039;
-  color: #fff5e0;
-  text-align: center;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  align-self: center;
-  padding: 2rem;
-  border-radius: 10px;
-  margin-top: 2rem;
 }
 
 #added-todo {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  padding: 0.2rem 0.2rem;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 1rem;
-  grid-template-columns: 80% 20%;
-  background: #ff6969;
-  width: 100%;
 }
 #todo-form {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem 1rem;
-  cursor: pointer;
-  width: 100%;
 }
 #todo-form input::placeholder {
   color: #fff5e0a2;
@@ -72,7 +49,6 @@ button {
   color: #fff5e0;
   background: #ff6969;
   cursor: pointer;
-  padding: 0.8rem;
 }
 
 .completed {
