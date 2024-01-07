@@ -51,12 +51,7 @@ const EditedForm = styled.form`
   width: 100%;
   margin-top: 1rem;
   grid-gap: 2%;
-  // @media (max-width: 600px) {
-  //   grid-template-columns: 1fr 1fr;
-  //   justify-content: center;
-  //   grid-gap: 1rem;
-  //   // Adjust styles for smaller screens (sm)
-  // }
+}
 `;
 const Button = styled.button`
   padding: 15px 5px;
