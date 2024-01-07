@@ -3,6 +3,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import AddedTodo from "./AddedTodo";
 import EditTodoForm from "./EditTodoForm";
+import { Box, Typography } from "@mui/material";
 
 uuidv4();
 function TodoWrapper() {
@@ -97,8 +98,33 @@ function TodoWrapper() {
 
   // In summary, the editTask function updates the todos state by modifying a specific todo item's task property and toggling its isEditing property.This allows for editing a todo item in the todos state array.
   return (
-    <div id="todo-wrapper">
-      <h1 id="header">Todo List</h1>
+    <Box
+      mt={2}
+      sx={{
+        background: " #c70039",
+        color: " #fff5e0",
+        textAlign: "center",
+        display: "grid",
+        justifyItems: "center",
+        alignItems: "center",
+        alignSelf: "center",
+        padding: { xs: "1rem", sm: "2rem" },
+        borderRadius: "10px",
+        width: { xs: "100%", sm: "100%", md: "40rem", lg: "50rem" },
+      }}
+      id="todo-wrapper"
+    >
+      <Typography
+        sx={{
+          fontWeight: "bold",
+          fontSize: { xs: "2rem", sm: "3rem", md: "4rem", lg: "4rem" },
+        }}
+        variant="h3"
+        component="h3"
+        id="header"
+      >
+        Todo List
+      </Typography>
       <TodoForm addTodo={addTodo} />
       {/* Props Usage: Passing Props: Renders the TodoForm component and passesii the
       addTodo function as a prop: <TodoForm addTodo={addTodo} />. Allows
@@ -133,7 +159,7 @@ function TodoWrapper() {
       to allow the AddedTodo component to toggle the completion status of the
       todo item. deleteTodo: The deleteTodo function is passed as a prop to
       allow the AddedTodo component to delete the todo item. */}
-    </div>
+    </Box>
   );
 }
 // TodoWrapper serves as the parent component that holds the todos state and the addTodo function.
